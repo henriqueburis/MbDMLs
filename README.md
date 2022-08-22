@@ -4,8 +4,9 @@ By [Luiz H. Buris](http://), [Fabio A. Faria](https://).
 
 UNIFESP SJC -  Instituto de Ciência e Tecnologia
 
-## Introduction
-we propose three new approaches in the context of DML. We are particularly interested in NNGK due to its robustness and simplicity. As such, we introduce variants that take advantage of Mixup to cope with metric learning in incomplete supervision scenarios.
+## Introdução
+Propomos três novas abordagens no contexto da DML. Estamos particularmente interessados no NNGK devido à sua robustez e simplicidade. Como tal, apresentamos variantes que aproveitam o Mixup para lidar com o aprendizado de métrica em cenários de supervisão incompletos.
+
 
 - https://github.com/LukeDitria/OpenGAN
 - https://github.com/facebookresearch/mixup-cifar10
@@ -25,12 +26,13 @@ If you use this method or this code in your paper, then please cite it:
 }
 ```
 
-## Code organization
+## Organização do code
 
 - `train_MbDML1-NNGK_Mixup.py`: Esta abordagem chamada $MbDML-1$ é uma simples combinação entre as funções de perdas das abordagens originais (NNGK e Mixup para compor a função de perda final desta abordagem. 
 - `train_MbDML2_MixupNNGK.py` :  Esta abordagem chamada $MbDML-2$, as imagens $x_i$ e $x_j$ do conjunto de dados de treinamento e seus respectivos rótulos $y_i$ e $y_j$ dentro do lote são interpoladas pelo método Mixup, são passadas pela rede CNN pré-treinada e classificadas pelo classificador $NNGK$.
-- `train_MbDML3_MixupNNGK_NNGK.py` :  Esta abordagem chamada $MbDML-3$, é a simples combinação linear entre a função de perda $MbDML-2$ e a função de perda original $NNGK$
-- `train_NNGK.py` : nngk original.
+- `train_MbDML3_MixupNNGK_NNGK.py` :  Esta abordagem chamada $MbDML-3$, é a simples combinação linear entre a função de perda $MbDML-2$ e a função de perda original $NNGK$.
+- `train_MbDML4_MbDML3+NST.py` : Esta abordagem chamada \textit{MbDML} 4 é a combinação da estratégia supervisionada proposta neste trabalho \textit{MbDML} 3 com adição de uma técnica semi-supervisionada da literatura chamada \textit{Noisy Student Training} (NST). 
+- `train_NNGK.py` : Esta abordagem $NNGK$ é a original do artigo que foi proposto a melhoria.
 
 
 ## Requirements and Installation
@@ -41,7 +43,7 @@ If you use this method or this code in your paper, then please cite it:
 
 
 ## MbDML
-you can now carry out "run" the python scrypt with the following command:
+Comandos para executar os scrypt python de cada abordagenns
 
 ```sh
 python3 train_MbDML1-NNGK_Mixup.py --max_epochs=200 --name "CIFAR10-MbDML1-NNGK_Mixup" --scale_mixup 2 --alpha 1 --beta 1 --data_dir datasets/CIFAR100K10/train --test datasets/CIFAR100K10/Test --save_dir results/neighbour=200 --num_classes 100 --tsne_graph False --im_ext png --gpu_id 0 --input_size 32
@@ -58,18 +60,18 @@ python3 train_MbDML3_MixupNNGK_NNGK.py --max_epochs=200 --name "CIFAR10-MbDML3_M
 
 ```
 
-## Accuracy Test .....corrigindo.
+## Accuracy Test.
 
 CIFAR100 - Train    |  CIFAR100 - Test
 :-------------------------:|:-------------------------:
 ![](https://github.com/henriqueburis/Weekly-Learning_DML-Mixup_GAN/blob/main/figure/CIFAR100%20-%20XL10%25%20ACC%20-%20accuracy.png) |  ![](https://github.com/henriqueburis/Weekly-Learning_DML-Mixup_GAN/blob/main/figure/CIFAR100%20-%20XL10%25%20ACC%20-%20test.png) 
 
-## Different Embeddings
-Different embeddings defined by each approach: (a) samples in the feature space defined by a pre-trained CNN, (b)
-same samples projected onto a Gaussian kernel, (c) samples in the feature space of the pre-trained CNN together with the new
-samples created by Mixup, and (d) samples in the feature space by the combination of NNGK and Mixup. Notice that, in this
-paper, there are these four possible kinds of feature spaces, therefore the three proposed approaches based on Mixup (MbDML)
-are some combination of the existing feature spaces.
+## Diferentes espaço de caracteristicas.
+Diferentes embeddings definidos por cada abordagem: (a) amostras no espaço de características definido por uma CNN pré-treinada, (b)
+mesmas amostras projetadas em um kernel gaussiano, (c) amostras no espaço de características da CNN pré-treinada junto com o novo
+amostras criadas pelo Mixup e (d) amostras no espaço de recursos pela combinação de NNGK e Mixup. Observe que, neste
+No artigo, existem esses quatro tipos possíveis de espaços de características, portanto, as três abordagens propostas baseadas em Mixup (MbDML)
+são algumas combinações dos espaços de recursos existentes.
 
 ![N|Solid](https://github.com/henriqueburis/ICIP2022/blob/main/fig/spaces_b.png?raw=true )
 
