@@ -35,7 +35,7 @@ If you use this method or this code in your paper, then please cite it:
 - `train_NNGK.py` : Esta abordagem $NNGK$ é a original do artigo que foi proposto a melhoria.
 
 
-## Requirements and Installation
+## Requisitos e instalação.
 - Python version 3.6
 - A [PyTorch installation](http://pytorch.org/)
 - A [Pytorch-Metric-Learning installation](https://kevinmusgrave.github.io/pytorch-metric-learning/#installation)
@@ -75,7 +75,7 @@ são algumas combinações dos espaços de recursos existentes.
 
 ![N|Solid](https://github.com/henriqueburis/ICIP2022/blob/main/fig/spaces_b.png?raw=true )
 
-As can be seen in figure the classes are consistently much better separated by the Mixup(NNGK) 
+Como pode ser visto na figura, as classes são consistentemente muito melhor separadas pelo Mixup(NNGK)
 
 CIFAR100   |   CIFAR100
 :-------------------------:|:-------------------------:
