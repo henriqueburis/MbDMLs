@@ -60,11 +60,25 @@ python3 train_MbDML3_MixupNNGK_NNGK.py --max_epochs=200 --name "CIFAR10-MbDML3_M
 
 ```
 
-## Accuracy Test.
+## Curvas Accuracy.
+
+As figuras mostram as curvas de precisão de cada uma das abordagens supervisionadas propostas $MbDML1$, $MbDML2$ e $MbDML3$ em comparação com as abordagens originais NNGK e Mixup durante cada época do processo de treinamento e a cada $5 épocas no conjunto de teste, nas quatro bases de imagens adotadas neste experimento (CIfar10, CIfar100, MNIST e Flowers17).
+
+CIFAR10 - Train    |  CIFAR10 - Test
+:-------------------------:|:-------------------------:
+![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Cifar10-XL10_ACC_Train.png) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Cifar10-XL10_ACC_Test.png) 
 
 CIFAR100 - Train    |  CIFAR100 - Test
 :-------------------------:|:-------------------------:
-![](https://github.com/henriqueburis/Weekly-Learning_DML-Mixup_GAN/blob/main/figure/CIFAR100%20-%20XL10%25%20ACC%20-%20accuracy.png) |  ![](https://github.com/henriqueburis/Weekly-Learning_DML-Mixup_GAN/blob/main/figure/CIFAR100%20-%20XL10%25%20ACC%20-%20test.png) 
+![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Cifar100-XL10_ACC_Train.png) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Cifar100-XL10_ACC_Test.png) 
+
+MNIST - Train    |  MNIST - Test
+:-------------------------:|:-------------------------:
+![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Mnist-XL10_ACC_Train.png) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Mnist-XL10_ACC_Test.png) 
+
+FLOWER17 - Train    |  FLOWER17 - Test
+:-------------------------:|:-------------------------:
+![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Flower17-XL10_ACC_Train.png) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Flower17-XL10_ACC_Test.png) 
 
 ## Diferentes espaço de caracteristicas.
 Diferentes embeddings definidos por cada abordagem: (a) amostras no espaço de características definido por uma CNN pré-treinada, (b)
