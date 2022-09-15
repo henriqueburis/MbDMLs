@@ -80,7 +80,7 @@ FLOWER17 - Train    |  FLOWER17 - Test
 :-------------------------:|:-------------------------:
 ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Flower17-XL10_ACC_Train.png) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/Flower17-XL10_ACC_Test.png) 
 
-## Diferentes espaço de caracteristicas.
+## Diferentes espaço de características.
 Diferentes embeddings definidos por cada abordagem: (a) amostras no espaço de características definido por uma CNN pré-treinada, (b)
 mesmas amostras projetadas em um kernel gaussiano, (c) amostras no espaço de características da CNN pré-treinada junto com o novo
 amostras criadas pelo Mixup e (d) amostras no espaço de recursos pela combinação de NNGK e Mixup. Observe que, neste
