@@ -91,7 +91,7 @@ são algumas combinações dos espaços de recursos existentes.
 
 Como pode ser visto na figura, as classes são consistentemente muito melhor separadas pelo Mixup(NNGK)
 
-CIFAR100   |   CIFAR100
+CIFAR10   |   CIFAR100
 :-------------------------:|:-------------------------:
 ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/cifar10_tsne.gif) |  ![](https://github.com/henriqueburis/ICIP2022/blob/main/fig/cifar100_tsne.gif) 
 
